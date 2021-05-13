@@ -1,12 +1,12 @@
 import './App.css';
-import './Display';
-import './ButtonPanel'
+import Display from './Display';
+// import './ButtonPanel';
 
 function App() {
   return (
     <div>
       <Display />
-      <ButtonPanel />
+      {/* <ButtonPanel /> */}
     </div>
 
   );
