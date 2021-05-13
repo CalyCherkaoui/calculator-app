@@ -8,6 +8,6 @@ function Display({ result }) {
 }
 
 Display.defaultProps = { result: '0' };
-Display.propTypes = PropTypes.number.isRequired;
+Display.propTypes = { result: PropTypes.string };
 
 export default Display;
