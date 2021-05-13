@@ -1,36 +1,37 @@
 import React from 'react';
+import Button from './Button';
 
 function ButtonPanel() {
   return (
     <div className="buttonsPanel">
-      <div>
-        <div>AC</div>
-        <div>+/-</div>
-        <div>%</div>
-        <div>/</div>
+      <div className="buttons_row">
+        <Button name="AC" />
+        <Button name="+/-" />
+        <Button name="%" />
+        <Button name="/" />
       </div>
-      <div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>*</div>
+      <div className="buttons_row">
+        <Button name="7" />
+        <Button name="8" />
+        <Button name="9" />
+        <Button name="*" />
       </div>
-      <div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>-</div>
+      <div className="buttons_row">
+        <Button name="4" />
+        <Button name="5" />
+        <Button name="6" />
+        <Button name="-" />
       </div>
-      <div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>+</div>
+      <div className="buttons_row">
+        <Button name="1" />
+        <Button name="2" />
+        <Button name="3" />
+        <Button name="+" />
       </div>
-      <div>
-        <div>0</div>
-        <div>.</div>
-        <div>=</div>
+      <div className="buttons_row">
+        <Button name="0" />
+        <Button name="." />
+        <Button name="=" />
       </div>
     </div>
   );
