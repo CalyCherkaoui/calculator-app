@@ -6,6 +6,18 @@ const operate = (number0ne, numberTwo, operation) => {
     case '+':
       total = Big(number0ne) + Big(numberTwo);
       break;
+    case '-':
+      total = Big(number0ne) - Big(numberTwo);
+      break;
+    case '*':
+      total = Big(number0ne) * Big(numberTwo);
+      break;
+    case '/':
+      total = (numberTwo === 0) ? 'Error' : (Big(number0ne) / Big(numberTwo));
+      break;
+    case '%':
+      total = Big(number0ne) / 100;
+      break;
     default:
       break;
   }
