@@ -1,3 +1,5 @@
+import operate from './operate';
+
 const calculate = (data, buttonName) => {
   let { total, next, operation } = data;
   switch (buttonName) {
@@ -12,6 +14,12 @@ const calculate = (data, buttonName) => {
       break;
     default:
       break;
+  }
+
+  const ops = ['*', '+', '-', '/', '%'];
+
+  if (ops.includes(buttonName)) {
+    total = operate(total, next, buttonName);
   }
 
   return { total, next, operation };
