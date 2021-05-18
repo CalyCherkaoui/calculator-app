@@ -1,6 +1,6 @@
 import './App.css';
-import React from 'react';
-import { Component } from 'react';
+import React, { Component } from 'react';
+
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 // import calculate from './logic/calculate';
@@ -15,13 +15,21 @@ import ButtonPanel from './ButtonPanel';
 class App extends Component {
   constructor(props) {
     super(props);
-  };
+    this.state = {
+      total: '0',
+      next: '',
+      operation: '',
+    }
+  }
 
   render() {
-    <>
-      <Display />
-      <ButtonPanel />
-    </>
-  };
-};
+    return (
+      <>
+        <Display />
+        <ButtonPanel />
+      </>
+    );
+  }
+}
+
 export default App;
