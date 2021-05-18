@@ -15,17 +15,18 @@ import ButtonPanel from './ButtonPanel';
 class App extends Component {
   constructor(props) {
     super(props);
+    /* eslint-disable react/no-unused-state */
     this.state = {
       total: '0',
       next: '',
       operation: '',
-    }
+    };
   }
 
   render() {
     return (
       <>
-        <Display />
+        <Display result={this.state} />
         <ButtonPanel />
       </>
     );
