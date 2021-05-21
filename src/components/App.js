@@ -22,7 +22,7 @@ class App extends Component {
     this.setState(
       (state) => calculate(state, buttonName),
     );
-  };
+  }
 
   render() {
     return (
