@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = ({ result }) => (
-  <p>{ result }</p>
+  <>
+    <div className="displayer">
+      {result.total}
+    </div>
+  </>
 );
 
-Display.defaultProps = { result: '0' };
-Display.propTypes = { result: PropTypes.string };
+Display.defaultProps = { total: '0' };
+Display.propTypes = PropTypes.string.isRequired;
 
 export default Display;
