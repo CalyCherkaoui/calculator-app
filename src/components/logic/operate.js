@@ -1,31 +1,31 @@
 import Big from 'big.js';
 
 const operate = (number0ne, numberTwo, operation) => {
-  let total = 0;
+  let total = '0';
   const numOne = new Big(number0ne);
   const numTwo = new Big(numberTwo);
 
   switch (operation) {
     case '+':
-      total = numOne + numTwo;
+      total = numOne.plus(numTwo);
       break;
     case '-':
-      total = numOne - numTwo;
+      total = numOne.minus(numTwo);
       break;
     case '*':
-      total = numOne * numTwo;
+      total = numOne.times(numTwo);
       break;
     case '/':
-      total = (numberTwo === 0) ? 'Error' : (numOne / numTwo);
+      total = (numberTwo === 0) ? 'Error' : numOne.div(numTwo).toString;
       break;
     case '%':
-      total = numOne / 100;
+      total = numOne.div(100).times(numTwo);
       break;
     default:
       break;
   }
 
-  return total;
+  return total.toString();
 };
 
 export default operate;
