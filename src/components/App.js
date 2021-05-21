@@ -18,9 +18,12 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(buttonName) {
+  handleClick(btn) {
     this.setState(
-      (state) => calculate(state, buttonName),
+      (state) => {
+        const { total, next, operation } = state;
+        return calculate({ total, next, operation }, btn);
+      },
     );
   }
 
