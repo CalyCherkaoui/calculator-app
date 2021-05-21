@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-// import calculate from './logic/calculate';
+import calculate from './logic/calculate';
 
 class App extends Component {
   constructor(props) {
@@ -14,13 +14,21 @@ class App extends Component {
       next: '',
       operation: '',
     };
+
+    this.handleClick = (buttonName) => {
+      this.setState(
+        (state) => {
+          calculate(state, buttonName);
+        },
+      );
+    };
   }
 
   render() {
     return (
       <>
         <Display result={this.state} />
-        <ButtonPanel />
+        <ButtonPanel clickHandler={this.handleClick} />
       </>
     );
   }
