@@ -9,7 +9,7 @@ const ButtonPanel = ({ clickHandler }) => {
     <>
       <div className="buttonsPanel">
         <div className="buttons_row">
-          <Button name="AC" clickHandler={handleClick} />
+          <Button name="AC" key="AC" clickHandler={handleClick} />
           <Button name="+/-" clickHandler={handleClick} />
           <Button name="%" clickHandler={handleClick} />
           <Button name="/" clickHandler={handleClick} />
