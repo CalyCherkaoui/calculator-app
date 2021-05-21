@@ -15,14 +15,14 @@ class App extends Component {
       operation: '',
     };
 
-    this.handleClick = (buttonName) => {
-      this.setState(
-        (state) => {
-          calculate(state, buttonName);
-        },
-      );
-    };
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick(buttonName) {
+    this.setState(
+      (state) => calculate(state, buttonName),
+    );
+  };
 
   render() {
     return (
