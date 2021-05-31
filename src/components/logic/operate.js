@@ -1,6 +1,10 @@
 import Big from 'big.js';
 
 const operate = (number0ne, numberTwo, operation) => {
+  if (numberTwo === '') {
+    return number0ne.toString();
+  }
+
   let total = '0';
   const numOne = new Big(number0ne);
   const numTwo = new Big(numberTwo);
@@ -16,12 +20,13 @@ const operate = (number0ne, numberTwo, operation) => {
       total = numOne.times(numTwo);
       break;
     case '/':
-      total = (numberTwo === 0) ? 'Error' : numOne.div(numTwo).toString;
+      total = (numberTwo === '0') ? 'Error: Divid by Zero' : numOne.div(numTwo).toString;
       break;
     case '%':
       total = numOne.div(100).times(numTwo);
       break;
     default:
+      total = 0;
       break;
   }
 
