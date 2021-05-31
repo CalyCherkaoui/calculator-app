@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
+// import React, { useState } from 'react';
 
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
@@ -21,8 +22,14 @@ class App extends Component {
   handleClick(btn) {
     this.setState(
       (state) => {
-        const { total, next, operation } = state;
-        return calculate({ total, next, operation }, btn);
+        const data = { total: state.total, next: state.next, operation: state.operation };
+        // eslint-disable-next-line no-console
+        console.log(data);
+        // eslint-disable-next-line no-console
+        console.log(calculate(data, btn));
+        // eslint-disable-next-line no-console
+        console.log('---------------');
+        return calculate(data, btn);
       },
     );
   }
