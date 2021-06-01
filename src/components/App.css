@@ -26,7 +26,27 @@ body {
 
 #root {
   border: 2px solid black;
-  padding: 12rem;
+  padding: 3rem;
+  width: 70vh;
+}
+
+.displayer {
+  width: 100%;
+  height: 8rem;
+  border: brown solid 3px;
+}
+
+.buttonsPanel {
+  border: chartreuse solid 3px;
+}
+
+.buttons_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  flex-grow: 1;
 }
 
 button {
