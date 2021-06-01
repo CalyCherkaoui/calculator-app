@@ -20,7 +20,7 @@ const operate = (number0ne, numberTwo, operation) => {
       total = numOne.times(numTwo);
       break;
     case '/':
-      total = (numberTwo === '0') ? 'Error: Divid by Zero' : numOne.div(numTwo).toString;
+      total = (numberTwo === '0') ? 'Error: Divid by Zero' : numOne.div(numTwo);
       break;
     case '%':
       total = numOne.div(100).times(numTwo);
