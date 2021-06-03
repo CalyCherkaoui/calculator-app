@@ -1,28 +1,36 @@
 import Big from 'big.js';
 
 const operate = (number0ne, numberTwo, operation) => {
-  let total = 0;
+  if (numberTwo === '') {
+    return number0ne.toString();
+  }
+
+  let total = '0';
+  const numOne = new Big(number0ne);
+  const numTwo = new Big(numberTwo);
+
   switch (operation) {
     case '+':
-      total = Big(number0ne) + Big(numberTwo);
+      total = numOne.plus(numTwo);
       break;
     case '-':
-      total = Big(number0ne) - Big(numberTwo);
+      total = numOne.minus(numTwo);
       break;
     case '*':
-      total = Big(number0ne) * Big(numberTwo);
+      total = numOne.times(numTwo);
       break;
     case '/':
-      total = (numberTwo === 0) ? 'Error' : (Big(number0ne) / Big(numberTwo));
+      total = (numberTwo === '0') ? 'Error: Divid by Zero' : numOne.div(numTwo);
       break;
     case '%':
-      total = Big(number0ne) / 100;
+      total = numOne.div(100).times(numTwo);
       break;
     default:
+      total = 0;
       break;
   }
 
-  return total;
+  return total.toString();
 };
 
 export default operate;
