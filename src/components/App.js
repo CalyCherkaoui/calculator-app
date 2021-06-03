@@ -1,7 +1,5 @@
 import './App.css';
 import React, { Component } from 'react';
-// import React, { useState } from 'react';
-
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
@@ -23,12 +21,6 @@ class App extends Component {
     this.setState(
       (state) => {
         const data = { total: state.total, next: state.next, operation: state.operation };
-        // eslint-disable-next-line no-console
-        console.log(data);
-        // eslint-disable-next-line no-console
-        console.log(calculate(data, btn));
-        // eslint-disable-next-line no-console
-        console.log('---------------');
         return calculate(data, btn);
       },
     );
