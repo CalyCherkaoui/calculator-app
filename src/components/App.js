@@ -62,7 +62,7 @@ const App = () => {
           <Route exact path='/' component={Home} />
           <Route 
             exact 
-            path='/calculatrice'
+            path='/calculator'
             render={
                       () => (      
                               <div>
