@@ -6,6 +6,7 @@ import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
 import './App.css';
 import Home from './Home';
+import Quote from './Quote';
 
 // class App extends Component {
 //   constructor(props) {
