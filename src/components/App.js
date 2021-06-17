@@ -7,6 +7,7 @@ import calculate from './logic/calculate';
 import './App.css';
 import Home from './Home';
 import Quote from './Quote';
+import Navigation from './Navigation';
 
 // class App extends Component {
 //   constructor(props) {
@@ -56,6 +57,7 @@ const App = () => {
     // </>
     <Router>
       <>
+        <Navigation />
         <Switch>
           <Route exact path='/' component={Home} />
           <Route 
