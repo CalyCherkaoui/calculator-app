@@ -40,10 +40,18 @@ import './App.css';
 const App = () => {
   const [state, setState] = useState({ total: '', next: '', operation: '' });
 
-  const handleClick = btn => {
+  const handleClick = (btn) => {
     setState(calculate(state, btn));
-  }
-  return <div>app</div>;
+  };
+
+  return (
+    <>
+      <div>
+        <Display result={`${state.total} ${state.operation} ${state.next}`} />
+        <ButtonPanel clickHandler={handleClick} />
+      </div>
+    </>
+  );
 };
 
 export default App;
