@@ -39,6 +39,10 @@ import './App.css';
 
 const App = () => {
   const [state, setState] = useState({ total: '', next: '', operation: '' });
+
+  const handleClick = btn => {
+    setState(calculate(state, btn));
+  }
   return <div>app</div>;
 };
 
