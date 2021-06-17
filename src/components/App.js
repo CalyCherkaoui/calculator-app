@@ -1,5 +1,6 @@
 // import React, { Component } from 'react';
 import React, { useState } from 'react';
+import { BrowserRouter, Route, Router, Switch } from 'react-router-dom';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
@@ -45,12 +46,32 @@ const App = () => {
   };
 
   return (
-    <>
-      <div>
-        <Display result={`${state.total} ${state.operation} ${state.next}`} />
-        <ButtonPanel clickHandler={handleClick} />
-      </div>
-    </>
+    // <>
+      // <div>
+      //   <Display result={`${state.total} ${state.operation} ${state.next}`} />
+      //   <ButtonPanel clickHandler={handleClick} />
+      // </div>
+    // </>
+    <Router>
+      <>
+        <Switch>
+          <Route exact path='/home' component={Home} />
+          <Route 
+            exact 
+            path='/calculatrice'
+            render={
+                      () => (      
+                              <div>
+                                <Display result={`${state.total} ${state.operation} ${state.next}`} />
+                                <ButtonPanel clickHandler={handleClick} />
+                              </div>
+                            )
+                    }
+          />
+          <Route exact path='/quotes' component={Quote} />
+        </Switch>
+      </>
+    </Router>
   );
 };
 
