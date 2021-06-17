@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Display = ({ result }) => (
-  <>
-    <div className="displayer">
-      {result.total}
-    </div>
-  </>
+  <div className="displayer">
+    {result}
+  </div>
 );
 
 Display.defaultProps = { result: '0' };
