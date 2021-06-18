@@ -25,7 +25,7 @@ const App = () => {
           path="/calculator"
           render={
                     () => (
-                      <div>
+                      <div className="calculator">
                         <Display result={`${state.total} ${state.operation} ${state.next}`} />
                         <ButtonPanel clickHandler={handleClick} />
                       </div>
