@@ -98,6 +98,39 @@ body {
   color: #fca311;
 }
 
+/* Home and Qoute pages */
+.home,
+.quote {
+  /* background-color: cornflowerblue; */
+  padding: 3rem;
+  height: 70vh;
+}
+
+.home_title,
+.quote_title {
+  color: var(--classic-blue);
+  font-family: 'Ultra', serif, Arial;
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  width: 50%;
+}
+
+.home_text,
+.quote_text {
+  color: #03045e;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  padding: 4rem;
+  width: 50%;
+  margin: auto;
+}
+
+.quote_text span {
+  color: var(--tangerine);
+  font-style: italic;
+}
+
 .displayer {
   width: 100%;
   height: 8rem;
