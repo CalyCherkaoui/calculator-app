@@ -4,7 +4,7 @@
 :root {
   --my_nav_backg: rgba(253, 253, 253, 2);
   --my_dark_main: #1b2d38;
-  --my_light_second: #2EB641;
+  --my_light_second: #2eb641;
   --tangerine: #da4221;
   --my-light-blue: #2ab2c0;
   --text-dark: #272727;
@@ -44,7 +44,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--my_nav_backg);
-
   -webkit-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
   -moz-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
   box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
@@ -67,11 +66,9 @@ body {
 
 .nav_list {
   list-style: none;
-  margin: 0;
   display: flex;
   flex-direction: row;
   margin: 1rem;
-  /* background-color: blue; */
 }
 
 .nav_item {
@@ -101,7 +98,6 @@ body {
 /* Home and Qoute pages */
 .home,
 .quote {
-  /* background-color: cornflowerblue; */
   padding: 3rem;
   height: 70vh;
 }
@@ -142,6 +138,7 @@ body {
 .displayer {
   width: 100%;
   height: 8rem;
+
   /* border: brown solid 3px; */
   background-color: rgb(197, 217, 219);
   font-size: 3rem;
