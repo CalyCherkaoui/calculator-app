@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home page Matches Quote page snapshot 1`] = `
+exports[`Home page Matches Home page snapshot 1`] = `
 <div
   className="home"
 >
