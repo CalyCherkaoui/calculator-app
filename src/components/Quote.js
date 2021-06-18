@@ -1,16 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-const Quote = () => {
-  return (
-    <div className='quote'>
-      <h1 className='quote_title'>Daily dose of wisdom</h1>
-      <p className='quote_text'>
-          Mathematics is the most beautiful and most powerful creation of the human spirit.
-          <span>-by Stefan Banach</span>
-      </p>
-      
-    </div>
-  )
-}
+const Quote = () => (
+  <div className="quote">
+    <h1 className="quote_title">Daily dose of wisdom</h1>
+    <p className="quote_text">
+      Mathematics is the most beautiful and most powerful creation of the human spirit.
+      <span>-by Stefan Banach</span>
+    </p>
 
-export default Quote
+  </div>
+);
+
+export default Quote;
