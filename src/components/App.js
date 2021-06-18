@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Display from './Display';
@@ -18,25 +17,23 @@ const App = () => {
 
   return (
     <Router>
-      <>
-        <Navigation />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            exact
-            path="/calculator"
-            render={
-                      () => (
-                        <div>
-                          <Display result={`${state.total} ${state.operation} ${state.next}`} />
-                          <ButtonPanel clickHandler={handleClick} />
-                        </div>
-                      )
-                    }
-          />
-          <Route exact path="/quote" component={Quote} />
-        </Switch>
-      </>
+      <Navigation />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route
+          exact
+          path="/calculator"
+          render={
+                    () => (
+                      <div>
+                        <Display result={`${state.total} ${state.operation} ${state.next}`} />
+                        <ButtonPanel clickHandler={handleClick} />
+                      </div>
+                    )
+                  }
+        />
+        <Route exact path="/quote" component={Quote} />
+      </Switch>
     </Router>
   );
 };
