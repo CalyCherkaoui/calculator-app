@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, StaticRouter as Router, Switch } from 'react-router-dom';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
