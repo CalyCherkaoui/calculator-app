@@ -7,7 +7,7 @@ describe(
   'App component',
   () => {
     it('Matches App snapshot', () => {
-      const comp = renderer.create(<BrowserRouter><App /></BrowserRouter>);
+      const comp = renderer.create(<Router><App /></Router>);
       expect(comp).toMatchSnapshot();
     });
   },
