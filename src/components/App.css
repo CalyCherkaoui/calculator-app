@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 :root {
-  --global-backgroud: blue;
-  --number-btns: grey;
-  --operation-btns: yellow;
-  --display-font: black;
-  --number-btns-font: black;
-  --operation-btns-font: black;
+  --my_nav_backg: rgba(253, 253, 253, 2);
+  --my_dark_main: #1b2d38;
+  --my_light_second: #2eb641;
+  --tangerine: #da4221;
+  --my-light-blue: #2ab2c0;
+  --text-dark: #272727;
+  --classic-blue: #0f4c81;
 }
 
 *,
@@ -25,19 +29,121 @@ body {
 }
 
 #root {
-  border: 2px solid black;
+  width: 100%;
+  height: 100vh;
+}
+
+/* navigation bar */
+
+.navbar_wrapper {
+  width: 100%;
+  margin: 0;
+  height: 5rem;
+  padding: 0.3rem 0.1rem 0.8rem 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--my_nav_backg);
+  -webkit-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  -moz-box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+  box-shadow: 0 2px 6px 0 rgba(10, 22, 78, 0.15);
+}
+
+.logo {
+  margin-left: 1rem;
+  font-family: 'Ultra', serif, Arial;
+  font-size: 1.8rem;
+  color: #14213d;
+  line-height: 2;
+}
+
+.logo span {
+  font-family: 'Ultra', serif, Arial;
+  font-size: 1.8rem;
+  color: #fca311;
+  line-height: 2;
+}
+
+.nav_list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+.nav_item {
+  margin: 1rem;
+}
+
+.nav_link {
+  text-decoration: none;
+  padding: 0.2rem 0.6rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #03045e;
+}
+
+.nav_link:hover {
+  border-bottom: 2px solid #fca311;
+  color: #fca311;
+}
+
+/* Home and Qoute pages */
+.home,
+.quote {
   padding: 3rem;
-  width: 70vh;
+  height: 70vh;
+}
+
+.home_title,
+.quote_title {
+  color: var(--classic-blue);
+  font-family: 'Ultra', serif, Arial;
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  width: 50%;
+}
+
+.home_text,
+.quote_text {
+  color: #03045e;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  padding: 4rem;
+  width: 50%;
+  margin: auto;
+}
+
+.quote_text span {
+  color: var(--tangerine);
+  font-style: italic;
+}
+
+/* Calculator page */
+
+.calculator {
+  padding-top: 3rem;
+  max-width: 60%;
+  margin: auto;
 }
 
 .displayer {
   width: 100%;
   height: 8rem;
-  border: brown solid 3px;
-}
 
-.buttonsPanel {
-  border: chartreuse solid 3px;
+  /* border: brown solid 3px; */
+  background-color: rgb(197, 217, 219);
+  font-size: 3rem;
+  color: var(--classic-blue);
+  padding: 4%;
 }
 
 .buttons_row {
@@ -47,6 +153,12 @@ body {
 
 .btn {
   flex-grow: 1;
+  width: 25%;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #14213d;
 }
 
 button {
