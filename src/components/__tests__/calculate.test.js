@@ -26,4 +26,11 @@ describe('Calculate logic', () => {
     data = calculate(data, '=');
     expect(JSON.parse(data.total)).toEqual(10);
   });
+
+  it('Calculates the multiplication of two numbers', () => {
+    data = calculate(data, '*');
+    data = calculate(data, '2');
+    data = calculate(data, '=');
+    expect(JSON.parse(data.total)).toEqual(20);
+  });
 });
