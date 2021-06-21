@@ -47,4 +47,9 @@ describe('Calculate logic', () => {
     data = calculate(data, '=');
     expect(JSON.parse(data.total)).toEqual(10);
   });
+
+  it('Resets the value to 0 when AC is trigered', () => {
+    data = calculate(data, 'AC');
+    expect(data).toEqual({ total: '0', next: '0', operation: '' });
+  });
 });
