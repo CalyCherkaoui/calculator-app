@@ -11,4 +11,11 @@ describe('Calculate logic', () => {
     data = calculate(data, '1');
     expect(data.total).toBe('1');
   });
+
+  it('Calculates the sum of two numbers', () => {
+    data = calculate(data, '+');
+    data = calculate(data, '10');
+    data = calculate(data, '=');
+    expect(JSON.parse(data.total)).toBe(11);
+  });
 });
