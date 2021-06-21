@@ -39,12 +39,6 @@ const calculate = (data, buttonName) => {
       break;
   }
 
-  // const ops = ['*', '+', '-', '/', '%'];
-
-  // if (ops.includes(buttonName)) {
-  //   total = operate(total, next, buttonName);
-  // }
-
   return { total, next, operation };
 };
 
