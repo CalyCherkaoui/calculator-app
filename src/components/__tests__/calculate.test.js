@@ -19,4 +19,11 @@ describe('Calculate logic', () => {
     data = calculate(data, '=');
     expect(JSON.parse(data.total)).toEqual(11);
   });
+
+  it('Calculates the difference of two numbers', () => {
+    data = calculate(data, '-');
+    data = calculate(data, '1');
+    data = calculate(data, '=');
+    expect(JSON.parse(data.total)).toEqual(10);
+  });
 });
